@@ -8,8 +8,33 @@
 sudo adduser BENUTZER [OPTIONEN]
 sudo addgroup [OPTIONEN] GRUPPE
 ```
-Example
+Examples
 ```Shell
 sudo adduser newuser      # create new user
 sudo adduser xyz www-data # add user to group
+```
+Add given user to sudo group
+```Shell
+sudo usermod -aG sudo BENUTZERNAME
+```
+
+
+```Shell
+sudo usermod -aG sudo BENUTZERNAME
+```
+
+
+```Shell
+sudo usermod -aG sudo BENUTZERNAME
+```
+
+
+```Shell
+sudo usermod -aG sudo BENUTZERNAME
+```
+
+
+
+```Shell
+sudo usermod -aG sudo BENUTZERNAME
 ```
