@@ -17,24 +17,23 @@ Add given user to sudo group
 ```Shell
 sudo usermod -aG sudo BENUTZERNAME
 ```
-
-
+Change password of given user 
 ```Shell
-sudo usermod -aG sudo BENUTZERNAME
+passwd [OPTIONEN] [BENUTZERNAME]
+passwd           # Change own password
+sudo passwd user # change users password
 ```
 
-
+## cat
+Originally cat was used to concatenate files
 ```Shell
-sudo usermod -aG sudo BENUTZERNAME
+cat OPTIONEN DATEI(EN)
 ```
-
-
+Merge files with cat
 ```Shell
-sudo usermod -aG sudo BENUTZERNAME
+cat Seite_1.txt Seite_2.txt > text_komplett.txt
 ```
-
-
-
+Use cat to show content of text filed
 ```Shell
-sudo usermod -aG sudo BENUTZERNAME
+cat textfile.txt
 ```
