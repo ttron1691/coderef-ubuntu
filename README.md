@@ -37,3 +37,21 @@ Use cat to show content of text filed
 ```Shell
 cat textfile.txt
 ```
+## cd
+Changing directory within the Linix shell is done via
+```Shell
+cd [OPTION] VERZEICHNIS
+```
+Merge files with cat
+```Shell
+cd /usr/local             # Wechsel nach /usr/local
+cd bin                    # Wechsel von /usr/local nach /usr/local/bin
+cd                        # Wechselt nach $HOME
+cd ..                     # Wechselt ins übergeordnete Verzeichnis also z.B. von /home/user nach /home
+cd ../user2               # Wechselt ins übergeordnete Verzeichnis und von dort nach user2, also z.B. von /home/user nach /home/user2 
+```
+Use cat to show content of text filed
+```Shell
+cat textfile.txt
+```
+
