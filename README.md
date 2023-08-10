@@ -1,17 +1,32 @@
 # Code Reference for Ubuntu
 ## Directory Management
-### Copy Files and Directories
-### Move Files and Directories
+### Basics
+```Shell
+ls [OPTION] [VERZEICHNIS]         # list content of current directory
+mkdir [OPTION] Verzeichnisname    # create new directory
+pwd [OPTIONEN]                    # print working directory
+
+# Examples
+mkdir bin             # creates new directory with name bin
+pwd $HOME/Documents   # prints /home/USERNAME/Documents
+```
+### Copy
+### Move
 ## User Management
+### Basics
+```Shell
+id                # Shows information about current user
+whoami            # Shows username of current user
+users             # Shows list of users which are logged in
+groups USERNAME   # Shows groups of user with given username
+```
 ### Add User
 ```Shell
 sudo adduser BENUTZER [OPTIONEN]
 sudo addgroup [OPTIONEN] GRUPPE
-```
-Examples
-```Shell
-sudo adduser newuser      # create new user
-sudo adduser xyz www-data # add user to group
+# Examples
+sudo adduser john             # create new user john
+sudo adduser xyz www-data     # add user xyz to group
 ```
 Add given user to sudo group
 ```Shell
