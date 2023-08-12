@@ -119,3 +119,18 @@ The public key can be placed on the remote system via the use of the "ssh-copy" 
 ```Shell
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 ```
+In case "ssh-copy" cannot be used or does not work as expected we may copy the public key content manually to the remote system via
+```Shell
+cat id_rsa.pub | ssh user@server 'cat>> ~/.ssh/authorized_keys'
+```
+### Security settings
+If SSH is used on a server, the following settings for the global SSH configuration file "/etc/ssh/sshd_config" should be set for security reasons
+```Shell
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+PermitRootLogin no
+```
+This enforces the log in via key authentication. The SSH server can be restarted via
+```Shell
+sudo systemctl reload ssh
+```
