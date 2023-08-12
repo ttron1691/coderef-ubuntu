@@ -99,5 +99,23 @@ Use cat to show content of text filed
 cat textfile.txt
 ```
 ## SSH
+The secure shell (SSH) protocol is most widely used to safely log in to a remote machine (e.g. remote server or server cluster). The basic command is given by
+```Shell
+ssh username@remote
+# Example
+ssh john@myserver.mydomain.de
+```
 ### Key Authentication
-The basic idea of SSH key authentication is as follows. Each user creates an SSH key pair consisting of a private and a public SSH key. The private key is kept private in every case on a local machine whereas the public SSH key is copied to each instance the user wants to log in to.
+The public key authentication is the recommended way for log in purposes instead of using a username and password. The basic idea of SSH key authentication is as follows. Each user creates an SSH key pair consisting of a private and a public SSH key. The private key is kept private in every case on a local machine whereas the public SSH key is copied to each instance the user wants to log in to. 
+Typically, the public key has the file ending ".pub"
+
+The public key of a registered user is typically located at the remote client directory "~/.ssh/authorized_keys".
+
+In order to create a key pair we can use the following command
+```Shell
+ssh-keygen -t rsa -b 4096 -C "user@server Server 1"
+```
+The public key can be placed on the remote system via the use of the "ssh-copy" command
+```Shell
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
+```
