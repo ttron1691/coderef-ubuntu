@@ -98,4 +98,6 @@ Use cat to show content of text filed
 ```Shell
 cat textfile.txt
 ```
-
+## SSH
+### Key Authentication
+The basic idea of SSH key authentication is as follows. Each user creates an SSH key pair consisting of a private and a public SSH key. The private key is kept private in every case on a local machine whereas the public SSH key is copied to each instance the user wants to log in to.
