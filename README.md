@@ -67,7 +67,12 @@ passwd [OPTIONEN] [BENUTZERNAME]
 passwd           # Change own password
 sudo passwd user # change users password
 ```
-
+## Updates
+For updates and upgrades, the following commands for the package manager can be used
+```Shell
+sudo apt update
+sudo apt upgrade
+```
 ## cat
 Originally cat was used to concatenate files
 ```Shell
@@ -134,3 +139,40 @@ This enforces the log in via key authentication. The SSH server can be restarted
 ```Shell
 sudo systemctl reload ssh
 ```
+## Firewall
+We can use the ufw (uncomplicated firewall) package which can be installed as follows
+### Installation
+```Shell
+sudo apt-get install ufw
+```
+### Status
+Check for the firewall status
+```Shell
+sudo ufw status
+```
+### Different Commands and Settings
+Reload the firewall after adjusting rules
+```Shell
+sudo ufw reload
+```
+At this point, the firewall is no active. We can define rules for allowing outgoing and blocking incoming traffic
+```Shell
+sudo ufw default deny incoming  
+sudo ufw default allow outgoing
+```
+Show apps and rules
+```Shell
+sudo ufw app list
+```
+In any case, it is necessary to allow the standard SSH protocol in order to access the remote machine
+```Shell
+sudo ufw allow ssh
+```
+### Enabling
+We can enable the firewall (after allowing ssh) by
+```Shell
+sudo ufw enable
+```
+
+
+
